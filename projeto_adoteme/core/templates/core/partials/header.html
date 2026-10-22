@@ -1,10 +1,17 @@
-<header>
-    <h1>AdoteME</h1>
-    <nav>
+{% load static %}
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <div class="site-brand">
+            <h1><a href="{% url 'animais:renderizar_index' %}">Adote<span>ME</span></a></h1>
+            <p>Um lar muda tudo</p>
+        </div>
+        <nav class="site-nav" aria-label="Navegação principal">
         <ul>
-            <li><a href="{% url 'home' %}">Início</a></li>
-            <li><a href="{% url 'sobre' %}">Adotar</a></li>
-            <li><a href="{% url 'contato' %}">Contato</a></li>
+            <li><a href="{% url 'animais:renderizar_index' %}">Início</a></li>
+            <li><a class="site-nav__adopt" href="{% url 'animais:renderizar_adotar' %}">Adotar</a></li>
+            <li><a class="site-nav__shelter" href="{% url 'animais:renderizar_abrigar' %}">Abrigar</a></li>
         </ul>
-    </nav>
+        </nav>
+    </div>
 </header>

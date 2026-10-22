@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'animais',
     'usuarios',
+    'core',
     'django_extensions',
 ]
 

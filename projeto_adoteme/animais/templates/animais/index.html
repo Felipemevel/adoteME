@@ -1,0 +1,98 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+AdoteME | Encontre seu novo melhor amigo
+{% endblock %}
+
+{% block content %}
+<section class="home-hero" aria-labelledby="home-hero-title">
+	<img
+		class="home-hero__image"
+		src="{% static 'assets/img/dog1.jpg' %}"
+		alt="Dois cães pequenos aproveitam um dia ao ar livre"
+		fetchpriority="high"
+	>
+	<div class="home-hero__shade" aria-hidden="true"></div>
+	<div class="home-hero__content">
+		<p class="home-hero__eyebrow">Adoção responsável começa com um encontro</p>
+		<h2 id="home-hero-title">Seu próximo melhor amigo está aqui.</h2>
+		<p class="home-hero__description">
+			Uma nova história pode começar com um gesto simples: abrir espaço para um novo companheiro.
+		</p>
+		<div class="home-hero__actions">
+			<a class="home-button home-button--primary" href="{% url 'animais:renderizar_adotar' %}">
+				Quero adotar <span aria-hidden="true">&#8594;</span>
+			</a>
+			<a class="home-button home-button--outline" href="{% url 'animais:renderizar_abrigar' %}">
+				Sou um abrigo
+			</a>
+		</div>
+	</div>
+	<a class="home-hero__scroll" href="#conheca" aria-label="Explore a página">
+		<span aria-hidden="true">&#8595;</span>
+	</a>
+</section>
+
+<section class="home-discover" id="conheca" aria-labelledby="home-discover-title">
+	<div class="home-discover__inner">
+		<div class="home-section-heading">
+			<div>
+				<p class="home-kicker">Mais amor, mais histórias</p>
+				<h2 id="home-discover-title">Um encontro muda tudo.</h2>
+			</div>
+			<p class="home-section-heading__copy">
+				Cães e gatos têm jeitos únicos de transformar uma casa em lar. O primeiro passo é conhecer a jornada.
+			</p>
+		</div>
+
+		<div class="home-gallery" aria-label="Conheça os animais e a adoção">
+			<a class="home-photo home-photo--feature" href="{% url 'animais:renderizar_adotar' %}">
+				<img src="{% static 'assets/img/do2.jpg' %}" alt="Cão dourado usando óculos redondos">
+				<span class="home-photo__caption">
+					<span>Adote com o coração</span>
+					<strong>Companheiros para a vida</strong>
+				</span>
+			</a>
+			<a class="home-photo" href="{% url 'animais:renderizar_adotar' %}">
+				<img src="{% static 'assets/img/gato2.webp' %}" alt="Gatinho cinza levantando uma das patas">
+				<span class="home-photo__caption">
+					<span>Personalidade de sobra</span>
+					<strong>Amor felino</strong>
+				</span>
+			</a>
+			<a class="home-photo" href="{% url 'animais:renderizar_adotar' %}">
+				<img src="{% static 'assets/img/dog1.jpg' %}" alt="Dois cães pequenos sentados na grama">
+				<span class="home-photo__caption">
+					<span>Grandes ou pequenos</span>
+					<strong>Amigos de todo jeito</strong>
+				</span>
+			</a>
+			<a class="home-photo home-photo--wide" href="{% url 'animais:renderizar_abrigar' %}">
+				<img src="{% static 'assets/img/dog3.webp' %}" alt="Cão em frente à casinha de um abrigo">
+				<span class="home-photo__caption">
+					<span>Você também pode fazer parte</span>
+					<strong>Conheça o espaço para abrigos</strong>
+				</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="home-invite" aria-labelledby="home-invite-title">
+	<div class="home-invite__inner">
+		<div class="home-invite__copy">
+			<p class="home-kicker">O próximo passo é seu</p>
+			<h2 id="home-invite-title">Toda grande amizade começa com um olá.</h2>
+		</div>
+		<div class="home-invite__actions">
+			<a class="home-button home-button--light" href="{% url 'animais:renderizar_adotar' %}">
+				Encontrar um amigo <span aria-hidden="true">&#8594;</span>
+			</a>
+			<a class="home-invite__link" href="{% url 'animais:renderizar_abrigar' %}">
+				Tenho um abrigo <span aria-hidden="true">&#8599;</span>
+			</a>
+		</div>
+	</div>
+</section>
+{% endblock %}
